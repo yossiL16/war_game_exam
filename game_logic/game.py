@@ -12,5 +12,5 @@ def init_game()->dict:
 
 
 def play_round(p1:dict,p2:dict):
-    pass
+
 
