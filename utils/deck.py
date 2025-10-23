@@ -1,4 +1,4 @@
-
+import random
 
 
 def create_card(rank:str,suite:str) -> dict:
@@ -90,4 +90,21 @@ def create_deck() -> list[dict]:
 
 
 def shuffle(deck:list[dict]) -> list[dict]:
-    pass
+
+
+    for i in range(1):
+        list_cards = deck
+        list_numbers = []
+        randomaly = random.randrange(2,11)
+        list_numbers.append(randomaly)
+        randomaly = random.randrange(2, 11)
+        list_numbers.append(randomaly)
+
+        if list_numbers[0] == list_numbers[1]:
+            continue
+        else:
+            list_cards[list_numbers[0]], list_cards[list_numbers[1]] = list_cards[list_numbers[1]], list_cards[list_numbers[0]]
+
+        return list_cards
+
+
