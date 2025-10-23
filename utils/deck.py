@@ -11,7 +11,7 @@ def create_card(rank:str,suite:str) -> dict:
             dicti_card["suite"] = suite
 
             listi_of_num = ["2","3","4","5","6","7","8","9","10"]
-            list_letter = ["J","Q", "K", "A"]
+
             for number in listi_of_num:
                 if number == rank:
                     dicti_card["value"] = int(number)
@@ -33,15 +33,25 @@ def create_card(rank:str,suite:str) -> dict:
 
             break
 
-
-
-
-create_card("J", "S")
+    return dicti_card
 
 
 
 def compare_cards(p1_card:dict, p2_card:dict) -> str:
-    pass
+
+
+    if p1_card.get("value") > p2_card.get("value"):
+
+        return "p1"
+    elif p1_card.get("value") < p2_card.get("value"):
+
+        return "p2"
+
+    else:
+        return "WAR"
+
+
+
 
 def create_deck() -> list[dict]:
     pass
