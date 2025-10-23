@@ -54,7 +54,40 @@ def compare_cards(p1_card:dict, p2_card:dict) -> str:
 
 
 def create_deck() -> list[dict]:
-    pass
+
+    list_dict_card = []
+    for i in range(10):
+        if i < 10:
+            dicti = create_card(str(i +1), "H")
+            list_dict_card.append(dicti)
+
+    for i in range(10):
+        if i < 10:
+            dicti = create_card(str(i + 1), "D")
+            list_dict_card.append(dicti)
+
+    for i in range(10):
+        if i < 10:
+            dicti = create_card(str(i + 1), "C")
+            list_dict_card.append(dicti)
+
+    for i in range(10):
+        if i < 10:
+            dicti = create_card(str(i + 1), "S")
+            list_dict_card.append(dicti)
+
+
+
+    list_letter = ["H","D", "C", "S"]
+    list_special = ["J", "Q", "K", "A"]
+    for i in list_letter:
+        for j in list_special:
+                dicti = create_card(i, j)
+                list_dict_card.append(dicti)
+
+    return list_dict_card
+
+
 
 def shuffle(deck:list[dict]) -> list[dict]:
     pass
